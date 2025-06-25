@@ -3,10 +3,10 @@ import {FaAlignLeft} from 'react-icons/fa'
 
 import React from 'react'
 import Logo from './Logo'
-import { useDashboardConext } from '../pages/DashboardLayout'
+import { useDashboardContext } from '../pages/DashboardLayout'
 
 const Navbar = () => {
-   const {toggleSidebar} = useDashboardConext()
+   const {toggleSidebar} = useDashboardContext()
   return (
     <Wrapper>
       <div className="nav-center">

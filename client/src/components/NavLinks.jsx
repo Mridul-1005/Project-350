@@ -1,6 +1,6 @@
 import React from 'react'
 import {useDashboardContext} from '../pages/DashboardLayout'
-import {links} from '../utils/links'
+import links from '../utils/links'
 import { NavLink } from 'react-router-dom'
 
 const NavLinks = () => {

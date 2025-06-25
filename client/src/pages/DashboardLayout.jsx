@@ -6,7 +6,7 @@ import Wrapper from '../assets/wrappers/Dashboard'
 import { BigSidebar, Navbar, SmallSidebar } from '../components'
 import { createContext } from 'react'
 
-const DashboardConext = createContext()
+const DashboardContext = createContext()
 
 const DashboardLayout = () => {
   //temp
@@ -29,7 +29,7 @@ const logoutUser = async ()=>{
 
 
   return (
-    <DashboardConext.Provider 
+    <DashboardContext.Provider 
     value={{
       user,
        showSidebar,
@@ -52,9 +52,9 @@ const logoutUser = async ()=>{
       </main>
       
     </Wrapper>
-    </DashboardConext.Provider>
+    </DashboardContext.Provider>
   );
 };
 
-export const useDashboardConext = ()=> useContext(DashboardConext);
-export default DashboardLayout
+export const useDashboardContext = ()=> useContext(DashboardContext);
+export default DashboardLayout;

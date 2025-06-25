@@ -1,7 +1,7 @@
 import Wrapper from '../assets/wrappers/SmallSidebar'
 
 import React from 'react'
-import { useDashboardConext } from '../pages/DashboardLayout'
+import { useDashboardContext } from '../pages/DashboardLayout'
 import { FaTimes } from 'react-icons/fa';
 import Logo from './Logo';
 import links from '../utils/links';
@@ -9,8 +9,8 @@ import { NavLink } from 'react-router-dom';
 import NavLinks from './NavLinks';
 
 const SmallSidebar = () => {
-  const {showSidebar, toggleSidebar} =  useDashboardConext();
-  
+  const {showSidebar, toggleSidebar} =  useDashboardContext();
+
   return (
     <Wrapper>
       <div className={showSidebar? 'sidebar-container show-sidebar' : 'sidebar-container'}>
