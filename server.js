@@ -7,8 +7,10 @@ import morgan from 'morgan';
 // routers
 import jobRouter from './routes/jobRouter.js';
 import mongoose from 'mongoose';
+import { validateTest } from './middleware/validationMiddleware.js';
 //middleware
 import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
+
 
 
 
@@ -30,9 +32,9 @@ app.get('/', (req, res)=>{
     res.send('Hello World!');
 })
 
-app.post('/', (req, res)=>{
-    console.log(req);
-    res.json({message: 'Data received successfully', data: req.body});
+app.post('/api/v1/test', validateTest, (req, res)=>{
+    const {name} = req.body;
+    res.json({message: `Hello ${name}`});
 });
 
 app.use('/api/v1/jobs', jobRouter);
