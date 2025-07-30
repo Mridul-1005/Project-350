@@ -6,6 +6,7 @@ import morgan from 'morgan';
 
 // routers
 import jobRouter from './routes/jobRouter.js';
+import authRouter from './routes/authRouter.js';
 import mongoose from 'mongoose';
 // import { validateTest } from './middleware/validationMiddleware.js';
 //middleware
@@ -35,6 +36,7 @@ app.get('/', (req, res)=>{
 
 
 app.use('/api/v1/jobs', jobRouter);
+app.use('/api/v1/auth', authRouter);
 
 
 //Get single job
