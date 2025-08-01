@@ -7,6 +7,7 @@ import morgan from 'morgan';
 // routers
 import jobRouter from './routes/jobRouter.js';
 import authRouter from './routes/authRouter.js';
+import userRouter from './routes/userRouter.js';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 // import { validateTest } from './middleware/validationMiddleware.js';
@@ -38,6 +39,7 @@ app.get('/', (req, res)=>{
 
 
 app.use('/api/v1/jobs', authenticateUser, jobRouter);
+app.use('/api/v1/users', authenticateUser, userRouter);
 app.use('/api/v1/auth', authRouter);
 
 
