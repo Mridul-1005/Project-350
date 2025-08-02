@@ -34,7 +34,11 @@ app.use(express.json());
 
 app.get('/', (req, res)=>{
     res.send('Hello World!');
-})
+});
+
+app.get('/api/v1/test', (req, res)=>{
+    res.json({msg: 'test route'});
+});
 
 
 
